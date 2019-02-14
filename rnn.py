@@ -1,4 +1,4 @@
-#%%
+# using keras to implement RNN
 from keras.models import Sequential
 import matplotlib.pyplot as plt
 from keras.optimizers import RMSprop
