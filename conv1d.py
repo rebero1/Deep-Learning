@@ -1,5 +1,5 @@
 
-#%%
+# Using embendding in Deep learning and Conv1D
 
 from keras.layers import Flatten, Dense
 import seaborn as sns
