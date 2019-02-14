@@ -1,5 +1,4 @@
-#%%
-# function api
+#  How to used APIS in keras
 
 
 from keras.datasets import imdb
@@ -30,8 +29,7 @@ y_train=np.random.random((1000,10))
 
 model.fit(x_train,y_train,epochs=5,batch_size=200)
 score= model.evaluate(x_train,y_train)
-score
-#%%
+ 
 
 
 text_vocabulary_size=10000
@@ -61,7 +59,7 @@ model = Model([text_input, question_input], answer)
 model.compile(optimizer='rmsprop',
               loss='categorical_crossentropy',
               metrics=['acc'])
-#%%
+  
 
 
 vocabulary_size=50000
@@ -91,7 +89,7 @@ model=Model(posts_input,
 
 model.compile(optimizer='rmsprop',
               loss=['mse', 'categorical_crossentropy', 'binary_crossentropy'], loss_weights=[0.25, 1., 10.])
-#%%
+ 
 from keras.layers import Conv2D,AvgPool2D
 input_tensor=Input(shape=(None,))
 branch_a = layers.Conv2D(32,1)(input_tensor)
@@ -109,7 +107,7 @@ branch_d = layers.Conv2D(64, (3, 3), strides=2)(branch_d)
 
 output=layers.concatenate([branch_a,branch_b,branch_c,branch_d],axis=-1)
 
-#%%
+ 
 import keras
 callbacks_lists=[
   keras.callbacks.EarlyStopping(monitor='val_loss',
@@ -119,7 +117,7 @@ callbacks_lists=[
   ),keras.callbacks.ReduceLROnPlateau(monitor='val_loss',
   factor=.1,patience=1)
 ]
-#%%
+ 
 
 from keras.models import Sequential
 from keras.preprocessing import sequence
@@ -155,8 +153,7 @@ callbacks=[keras.callbacks.TensorBoard(
 )]
 
 
-history = model.fit(x_train, y_train,
+model.fit(x_train, y_train,
                     epochs=20, batch_size=128,verbose=0,
                     validation_split=0.2,
                     callbacks=callbacks)
-l
