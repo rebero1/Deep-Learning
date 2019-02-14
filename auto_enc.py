@@ -1,4 +1,4 @@
-#%%
+# USING TENSORFLOW FOR AUTOENCODERING
 import numpy.random as rnd
 import numpy as np
 
